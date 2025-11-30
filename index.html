@@ -153,7 +153,7 @@
       font-size: 0.85rem;
       color: #c9d1d9;
     }
-    .preview-section { margin-top: 25px; text-align: center; }
+    .preview-section { margin: 25px 0; text-align: center; }
     .preview-btn {
       background: linear-gradient(90deg, #00d9ff, #00ff88);
       color: #1a1a2e;
@@ -229,6 +229,13 @@
         </div>
       </div>
     </header>
+    
+    <div class="preview-section">
+      <button class="preview-btn" onclick="previewImage()">✨ 预览随机图片</button>
+      <div class="preview-container" id="previewContainer">
+        <img class="preview-img" id="previewImg" alt="预览图片">
+      </div>
+    </div>
 
     <div class="section">
       <h2>API 接口</h2>
@@ -240,7 +247,7 @@
         </tr>
         <tr>
           <td><code>/pic</code></td>
-          <td>自动根据设备��择</td>
+          <td>自动根据设备选择</td>
           <td><span class="tag tag-redirect">302 重定向</span></td>
         </tr>
         <tr>
@@ -316,13 +323,6 @@
 <pre>fetch('<span class="origin"></span>/pic?json=h')
   .then(res => res.json())
   .then(data => console.log(data.theme, data.url));</pre>
-      </div>
-      
-      <div class="preview-section">
-        <button class="preview-btn" onclick="previewImage()">✨ 预览随机图片</button>
-        <div class="preview-container" id="previewContainer">
-          <img class="preview-img" id="previewImg" alt="预览图片">
-        </div>
       </div>
     </div>
 
